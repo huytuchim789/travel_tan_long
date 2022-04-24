@@ -85,7 +85,7 @@
 						@can('tour_publish', Auth::user())
 						    <div class="form-check">
 								<input type="checkbox" value="1" name="status" class="form-check-input" id="publish">
-								<label class="form-check-label" for="publish">Xuất bản</label>
+								<label class="form-check-label" for="publish">Còn tour</label>
 							</div>
 						@endcan						
 					</div>

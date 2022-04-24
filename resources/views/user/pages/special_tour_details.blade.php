@@ -9,21 +9,12 @@
 			<div class="row">
 				<div class="col-xs-12 col-md-8 col-md-offset-2">
 					<ul class="banner-breadcrumb color-white clearfix">
-						<li><a class="link-blue-2" href="/">home</a> /</li>
-						<li><a class="link-blue-2" href="/">Special Tour</a> /</li>
-						<li><span>Special Tour detail</span></li>
+						<li><a class="link-blue-2" href="/">Trang chủ</a> /</li>
+						<li><a class="link-blue-2" href="/">Tour nước ngoài</a> /</li>
+						<li><span>Chi tiết tour</span></li>
 					</ul>
-					<h2 class="color-white">Special Tour</h2>
+					<h2 class="color-white">Tour nước ngoài</h2>
 				</div>
-				<div class="input-group">
-					<div class="form-outline">
-						<input type="search" id="form1" class="form-control" />
-						<label class="form-label" for="form1">Search</label>
-					</div>
-					<button type="button" class="btn btn-primary">
-						<i class="fas fa-search"></i>
-					</button>
-					</div>
 			</div>
 		</div>
 	</div>
@@ -46,7 +37,7 @@
 							<span class="font-style-2 color-dark-2">{{ $specialTour->posted_by }}</span>
 						</div>
 						<div class="tour-info">
-							<span>Guides:</span>
+							<span>Hướng dẫn viên:</span>
 							@foreach($specialTour->guides as $guide)
 								<a href="{{ route('show.guide', $guide->id) }}"><span class="font-style-2 color-dark-2">{{ $guide->name }}</span></a>
 							@endforeach
@@ -64,7 +55,7 @@
 							</p>
 						</div>
 					</div>
-					<a href="{{ route('contact.home',$specialTour->id) }}" class="c-button small bg-dr-blue-2 hv-dr-blue-2-o"><span>For booking Contact</span></a>
+					<a href="{{ route('contact.home',$specialTour->id) }}" class="c-button small bg-dr-blue-2 hv-dr-blue-2-o"><span>Đặt tour</span></a>
 				</div>
 			</div>
 		</div>

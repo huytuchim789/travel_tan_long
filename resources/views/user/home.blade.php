@@ -58,13 +58,13 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="second-title">
-					<h2>Chọn Tour của bạn</h2>
+					<h2>Tour du lịch trong nước</h2>
 					<p class="color-grey">Cuộc sống tươi đẹp.</p>
 					<form action="{{ route('home.tours') }}" method="GET"> 
 					<div class="row">
 						<div class="col-xs-6 col-md-4">
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Search" id="txtSearch" name="search"/>
+							<input type="text" class="form-control" placeholder="Nhập tour cần tìm" id="txtSearch" name="search"/>
 							<div class="input-group-btn">
 							<button class="btn btn-primary" type="submit">
 								Tìm kiếm
@@ -98,7 +98,7 @@
 										<span class="font-style-2 color-grey-4">{{ $tour->created_at->diffForHumans() }}</span>
 									</div>
 								</div>   
-								<a href="{{ route('single.tour', $tour->slug) }}" class="c-button b-50 bg-aqua hv-transparent fr"><img src="{{ asset('user/img/flag_icon.png') }}" alt=""><span>Xem thêm</span></a>
+								<a href="{{ route('single.tour', $tour->slug) }}" class="c-button b-50 bg-aqua hv-transparent fr"><img src="{{ asset('user/img/flag_icon.png') }}" alt=""><span>Đặt tour</span></a>
 							</div>
 						</div>
 					</div>					
@@ -337,13 +337,13 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="second-title">
-					<h2>Ưu đãi đặc biệt</h2>
+					<h2>Tour du lịch nước ngoài</h2>
 					<p class="color-grey">Chúng tôi là một đại lý mai mối giá cả phải chăng cung cấp một nơi an toàn để tìm một người đích thực đang tìm kiếm điều gì đó đặc biệt với một ai đó và một mối quan hệ.</p>
 					<form action="{{ route('home.tours.special') }}" method="GET"> 
 					<div class="row">
 						<div class="col-xs-6 col-md-4">
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Search" id="txtSearch" name="search"/>
+							<input type="text" class="form-control" placeholder="Nhập tour cần tìm" id="txtSearch" name="search"/>
 							<div class="input-group-btn">
 							<button class="btn btn-primary" type="submit">
 								Tìm kiếm
@@ -373,7 +373,7 @@
 									<h3>{{ $specialTour->title }}</h3>
 								</div>
 								<div class="vertical-bottom">
-									<a href="{{ route('singleSpecial.tour', $specialTour->slug) }}" class="c-button bg-aqua hv-aqua-o b-40"><span>Xem thêm</span></a>
+									<a href="{{ route('singleSpecial.tour', $specialTour->slug) }}" class="c-button bg-aqua hv-aqua-o b-40"><span>Đặt tour</span></a>
 								</div>
 							</div> 
 						</div>

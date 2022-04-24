@@ -12,13 +12,13 @@
 	<div class="container-fluid">
 		<div class="row mb-2">
 			<div class="col-sm-6">
-				<h1>Special Tour List</h1>
+				<h1>Danh sách tour</h1>
 			</div>
 			<div class="col-sm-6">
 				<ol class="breadcrumb float-sm-right">
 					@can('tourSpecials.create', Auth::user())
 					    <li class="breadcrumb-item">
-							<a class="btn btn-sm btn-primary" href="{{ route('tour-special.create') }}">Create New Special Tour</a>
+							<a class="btn btn-sm btn-primary" href="{{ route('tour-special.create') }}">Tạo mới tour</a>
 						</li>
 					@endcan					
 				</ol>
@@ -35,18 +35,18 @@
 		<div class="col-12">
 			<div class="card">
 				<div class="card-header">
-					<h3 class="card-title">Your all Special Tour</h3>
+					<h3 class="card-title">Tất cả tour nước ngoài</h3>
 				</div>
 				<!-- /.card-header -->
 				<div class="card-body">
 					<table id="example1" class="table table-bordered table-hover table-striped">
 						<thead>
 							<tr>
-								<th>S.No</th>
-								<th>Title</th>
-								<th>Slug</th>
-								<th>Status</th>
-								<th>Actions</th>
+								<th>Thứ tự</th>
+								<th>Tên</th>
+								<th>Từ khóa</th>
+								<th>Trạng thái</th>
+								<th>Hành động</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -56,11 +56,11 @@
 									<td>{{ str_limit($tour->title, 30) }}</td>
 									<td>{{ str_limit($tour->slug, 30) }}</td>
 									<td>
-										{{ $tour->status == 1 ? 'published' : 'Not published' }}
+										{{ $tour->status == 1 ? 'còn tour' : 'tạm thời chưa có tour' }}
 									</td>
 									<td>
 										@can('tourSpecials.update', Auth::user())
-										    <a href="{{ route('tour-special.edit', $tour->id) }}" class="btn btn-sm btn-warning">Edit/Show</a>
+										    <a href="{{ route('tour-special.edit', $tour->id) }}" class="btn btn-sm btn-warning">Sửa</a>
 										@endcan										
 										
 										@can('tourSpecials.delete', Auth::user())
@@ -68,7 +68,7 @@
 												@csrf
 												@method('DELETE')
 											</form>
-											<a href="" onclick="if(confirm('Are you sure want to delete')){event.preventDefault();document.getElementById('delete-tour-{{ $tour->id }}').submit();}else{event.preventDefault();}" class="btn btn-sm btn-danger">Delete</a>
+											<a href="" onclick="if(confirm('Are you sure want to delete')){event.preventDefault();document.getElementById('delete-tour-{{ $tour->id }}').submit();}else{event.preventDefault();}" class="btn btn-sm btn-danger">Xóa</a>
 										@endcan									    
 									</td>
 								</tr>
@@ -76,13 +76,7 @@
 							
 						</tbody>
 						<tfoot>
-							<tr>
-								<th>S.No</th>
-								<th>Title</th>
-								<th>Slug</th>
-								<th>Status</th>
-								<th>Actions</th>
-							</tr>
+							
 						</tfoot>
 					</table>
 				</div>

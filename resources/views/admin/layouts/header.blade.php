@@ -106,7 +106,7 @@
                 <a href="{{ route('tour.index') }}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>
-                        Danh sách tour
+                        Tour trong nước
                     </p>
                 </a>
             </li>

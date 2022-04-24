@@ -14,11 +14,11 @@
 	<div class="container-fluid">
 		<div class="row mb-2">
 			<div class="col-sm-6">
-				<h1>Create New Special Tour</h1>
+				<h1>Tạo tour mới</h1>
 			</div>
 			<div class="col-sm-6">
 				<ol class="breadcrumb float-sm-right">
-					<li class="breadcrumb-item"><a class="btn btn-sm btn-primary" href="{{ route('tour-special.index') }}">All Tour</a></li>
+					<li class="breadcrumb-item"><a class="btn btn-sm btn-primary" href="{{ route('tour-special.index') }}">Tất cả Tour nước ngoài</a></li>
 				</ol>
 			</div>
 		</div>
@@ -36,7 +36,7 @@
 				<div class="card card-outline card-info">
 					<div class="card-header">
 						<h3 class="card-title">
-							Write Your Special Tour Here
+							Tạo tour ở đây
 						</h3>
 						@include('includes.errors')
 						<!-- tools box -->
@@ -50,13 +50,13 @@
 					<!-- /.card-header -->
 					<div class="card-body pad">
 						<div class="form-group">
-							<label for="title">Title</label>
-							<input type="text" name="title" class="form-control" id="title" placeholder="Enter your blog title">
+							<label for="title">Tên tour</label>
+							<input type="text" name="title" class="form-control" id="title" placeholder="Tên tour">
 						</div>
 						
 						<div class="form-group">
-							<label>Select Tour Guide</label>
-							<select name="guides[]" class="select2" multiple="multiple" data-placeholder="Select a State"
+							<label>Chọn HDV</label>
+							<select name="guides[]" class="select2" multiple="multiple" data-placeholder="Chọn HDV"
 								style="width: 100%;">
 								@foreach ($guides as $guide)
 									<option value="{{ $guide->id }}">{{ $guide->name }}</option>
@@ -65,30 +65,30 @@
 						</div>
 
 						<div class="form-group">
-							<label for="exampleInputFile">Image</label>
+							<label for="exampleInputFile">Hình ảnh</label>
 							<div class="input-group">
 								<div class="custom-file">
 									<input type="file" name="image" class="custom-file-input" id="exampleInputFile">
-									<label class="custom-file-label" for="exampleInputFile">Choose file</label>
+									<label class="custom-file-label" for="exampleInputFile">Chọn ảnh</label>
 								</div>
 								<div class="input-group-append">
-									<span class="input-group-text" id="">Upload</span>
+									<span class="input-group-text" id="">Tải lên</span>
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="body">Body</label>
+							<label for="body">Nội dung</label>
 							<textarea class="textarea" id="body" name="body" style="width: 100%; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
 						</div>
 						@can('tourSpecial_publish', Auth::user())
 							<div class="form-check">
 								<input type="checkbox" value="1" name="status" class="form-check-input" id="publish">
-								<label class="form-check-label" for="publish">Publish</label>
+								<label class="form-check-label" for="publish">Còn tour</label>
 							</div>    
 						@endcan						
 					</div>
 					<div class="card-footer">
-						<button type="submit" class="btn btn-primary">Submit</button>
+						<button type="submit" class="btn btn-primary">Lưu</button>
 					</div>
 				</div>
 			</form>

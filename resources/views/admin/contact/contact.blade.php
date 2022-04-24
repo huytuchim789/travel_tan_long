@@ -12,7 +12,7 @@
 	<div class="container-fluid">
 		<div class="row mb-2">
 			<div class="col-sm-6">
-				<h1>Danh sách booking</h1>
+				<h1>Danh sách đặt hàng</h1>
 			</div>
 		</div>
 	</div><!-- /.container-fluid -->
@@ -62,16 +62,16 @@
 										</form> 
 										 <a href="{{ route('message.update', $booking->contact->id) }}" onclick="event.preventDefault();document.getElementById('contact-{{ $booking->contact->id }}').submit();" class="btn btn-sm btn-warning">
 											@if ($booking->contact->seen == 0)
-						                      Unseen
+						                      tin nhắn chưa đọc
 						                    @elseif ($booking->contact->seen == 1)
-						                      Seen
+						                      tin nhắn đã đọc
 						                    @endif
 										</a> 
 										<form id="delete-{{ $booking->id }}" style="display: none;" method="POST" action="{{ route('message.destroy', $booking->id) }}">
 											@csrf
 											@method('DELETE')
 										</form>
-										<a href="" onclick="if(confirm('Are you sure want to delete')){event.preventDefault();document.getElementById('delete-contact-{{ $booking->id }}').submit();}else{event.preventDefault();}" class="btn btn-sm btn-danger">Delete</a>
+										<a href="" onclick="if(confirm('Are you sure want to delete')){event.preventDefault();document.getElementById('delete-contact-{{ $booking->id }}').submit();}else{event.preventDefault();}" class="btn btn-sm btn-danger">Xóa</a>
 									</td>
 								</tr>
 							@endforeach
