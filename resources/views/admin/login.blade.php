@@ -21,11 +21,11 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            Traveler's bd
+            HanoiTourist
         </div>
         <div class="card">
             <div class="card-body login-card-body">
-                <p class="login-box-msg">Sign in to start your session</p>
+                <p class="login-box-msg">Đăng nhập trang quản lý</p>
                 @include('includes.errors')
                 <form action="{{ route('admin.login') }}" method="post">
                     @csrf
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" name="password" class="form-control" placeholder="Password">
+                        <input type="password" name="password" class="form-control" placeholder="Mật khẩu">
                         <div class="input-group-append input-group-text">
                             <span class="fas fa-lock"></span>
                         </div>
@@ -44,7 +44,7 @@
                     <div class="row">
                         <!-- /.col -->
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                            <button type="submit" class="btn btn-primary btn-block btn-flat">Đăng nhập</button>
                         </div>
                         <!-- /.col -->
                     </div>

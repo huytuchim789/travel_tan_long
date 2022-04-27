@@ -6,11 +6,11 @@
 	<div class="container-fluid">
 		<div class="row mb-2">
 			<div class="col-sm-6">
-				<h1>Tạo người dùng</h1>
+				<h1>Tạo khách hàng</h1>
 			</div>
 			<div class="col-sm-6">
 				<ol class="breadcrumb float-sm-right">
-					<li class="breadcrumb-item"><a class="btn btn-sm btn-primary" href="{{ route('user.index') }}">Danh sách người dùng</a></li>
+					<li class="breadcrumb-item"><a class="btn btn-sm btn-primary" href="{{ route('user.index') }}">Danh sách khách hàng</a></li>
 				</ol>
 			</div>
 		</div>
@@ -28,7 +28,7 @@
 				<div class="card card-outline card-info">
 					<div class="card-header">
 						<h3 class="card-title">
-							Tạo người dùng ở đây
+							Tạo khách hàng ở đây
 						</h3>
 						@include('includes.errors')
 						<!-- tools box -->

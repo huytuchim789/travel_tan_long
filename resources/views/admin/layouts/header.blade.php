@@ -184,7 +184,7 @@
                     <a href="{{ route('user.index') }}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>
-                            Người dùng
+                            Khách hàng
                         </p>
                     </a>
                 </li>
@@ -195,7 +195,7 @@
                     <a href="{{ route('message.index') }}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>
-                            Danh sách đặt hàng
+                            Danh sách đơn hàng
                         </p>
                     </a>
                 </li>

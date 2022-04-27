@@ -12,11 +12,11 @@
 	<div class="container-fluid">
 		<div class="row mb-2">
 			<div class="col-sm-6">
-				<h1>Danh sách người dùng</h1>
+				<h1>Danh sách khách hàng</h1>
 			</div>
 			<div class="col-sm-6">
 				<ol class="breadcrumb float-sm-right">
-					<li class="breadcrumb-item"><a class="btn btn-sm btn-primary" href="{{ route('user.create') }}">Tạp người dùng mới</a></li>
+					<li class="breadcrumb-item"><a class="btn btn-sm btn-primary" href="{{ route('user.create') }}">Tạo khách hàng mới</a></li>
 				</ol>
 			</div>
 		</div>
@@ -30,7 +30,7 @@
 		<div class="col-12">
 			<div class="card">
 				<div class="card-header">
-					<h3 class="card-title">Tất cả người dùng</h3>
+					<h3 class="card-title">Tất cả khách hàng</h3>
 				</div>
 				<!-- /.card-header -->
 				<div class="card-body">
@@ -38,8 +38,8 @@
 						<thead>
 							<tr>
 								<th>Thứ tự</th>
-								<th>Tên người dùng</th>
-								<th>Email người dùng</th>
+								<th>Tên khách hàng</th>
+								<th>Email khách hàng</th>
 								<th>Hành Động </th>
 							</tr>
 						</thead>
@@ -56,7 +56,7 @@
 											@csrf
 											@method('DELETE')
 										</form>
-										<a href="" onclick="if(confirm('Are you sure want to delete')){event.preventDefault();document.getElementById('delete-tag-{{ $user->id }}').submit();}else{event.preventDefault();}" class="btn btn-sm btn-danger">Delete</a>
+										<a href="" onclick="if(confirm('Are you sure want to delete')){event.preventDefault();document.getElementById('delete-tag-{{ $user->id }}').submit();}else{event.preventDefault();}" class="btn btn-sm btn-danger">Xóa</a>
 									</td>
 								</tr>
 							@endforeach

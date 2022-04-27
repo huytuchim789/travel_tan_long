@@ -58,7 +58,7 @@
 							</div>
 						</div>
 						<div class="col-xs-12">
-							<textarea class="area-style-1 color-1" name="message" required="" placeholder="Nhập bình luận"></textarea>
+							<textarea class="area-style-1 color-1" name="message" required="" placeholder="Nhập thông tin người đặt tour"></textarea>
 							<div class="contact-info" style="margin-left:8px;margin-bottom:12px;">
 								<span name="total" class="color-dark-2"><strong>Tổng tiền:</strong></span name="total">
 								<input id="price" type="number" name="price" style="width:75%;">VNĐ
